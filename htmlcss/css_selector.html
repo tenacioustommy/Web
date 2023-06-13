@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* group by id */
+        #abc{
+            color: pink;
+        }
+        /* group by tag */
+        li{
+            color: gray;
+        }
+        div,span{
+            background-color: hotpink;
+        }
+        /* group by class */
+        .jay{
+            color: aquamarine;
+        }
+        /* include all child */
+        /* ul ol{
+            list-style: none;
+        } */
+        /* include one layer child */
+        ul>ol{
+            list-style: none;
+        }
+        /* only 与h1相邻的h2 */
+        h1+h2{
+            color: rebeccapurple;
+        }
+        /* attribute */
+        a[target]{
+            color: gold;
+        }
+        a[target='_blank']{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>sdf</li>
+        <li id="abc">ghj</li>
+        <li style="color: blue;">jkl</li>
+        <li>
+            <ol>
+                <li>sdfg</li>
+                <li>sdfa</li>
+            </ol>
+        </li>
+    </ul>
+    <ol>
+        <li>sdf</li>
+        <li id="abc">ghj</li>
+        <li style="color: blue;">jkl</li>
+        <li>gui</li>
+    </ol>
+    <div class="jay">hehe</div>
+    <span class="jay">hehe</span>
+    <h1>i love you</h1>
+    <h2>i love me</h2>
+    <h3>i love all</h3>
+    <a href="#" target="_blank">1</a>
+    <a href="#" target="_self">2</a>
+    <a href="#">3</a>
+</body>
+</html>

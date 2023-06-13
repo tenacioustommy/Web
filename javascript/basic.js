@@ -23,21 +23,18 @@ var wangfeng = {
 // 遍历
 for (let key in wangfeng) {
   // 函数的话就是打印return值
-  console.log(wangfeng.chi());
+  console.log(wangfeng[key]);
 }
 // list 独有的
-var arr = [11, 22, 33, 44];
-arr.forEach(function (item) {
-  console.log(item);
-});
+// var arr = [11, 22, 33, 44];
+// arr.forEach(function (item) {
+//   console.log(item);
+// });
 // create a arr length=2
-arr[0] = 1;
-arr[1] = 2;
-arr[2] = 0;
-console.log(arr);
-function fn(a, b) {
-  return a + b;
-}
+// arr[0] = 1;
+// arr[1] = 2;
+// arr[2] = 0;
+// console.log(arr);
 var $ = function (b) {
   console.log("hello" + b);
 };
@@ -68,10 +65,33 @@ document.write("<p>hello</p>");
 // if (1) {
 //   var greeting = "hello";
 // }
-
+// 隐式声明var
+// greeting='1'
 // let只能声明一次
 let greeting = "hi";
 greeting = 1;
 console.log(greeting);
-let uname = prompt("what's your name");
-document.write(uname);
+// let uname = prompt("what's your name");
+// document.write(uname);
+// 模板字符串，方便拼接
+document.write(`${greeting}`);
+console.log(typeof +"123");
+//匿名函数
+let fn = function (x, y) {
+  // console.log('i am function')
+  console.log(x + y);
+};
+fn(1, 2);
+// 立即执行函数
+(function () {
+  console.log("hello");
+})();
+(function () {
+  console.log("hello");
+})();
+//输出10!! 在判断时用boolean看，返回的是原来的值
+console.log(10 || 20);
+Math.random();
+let arr = ["red", "green", "blue"];
+let random = Math.floor(Math.random() * arr.length);
+console.log(random);

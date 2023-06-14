@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <textarea name="" id="" cols="30" rows="10">welcome
+    </textarea>
+    <br>
+    <button class="btn" disabled>i've read(5)</button>    
+    <script>
+        const btn=document.querySelector('.btn')
+        let i=5
+        let n=setInterval(() => {
+            i--
+            btn.innerHTML=`i've read(${i})`
+            if(i==0){
+                clearInterval(n)
+                btn.disabled=false
+                btn.innerHTML='agree'
+            }
+        }, 1000);
+    </script>
+</body>
+</html>

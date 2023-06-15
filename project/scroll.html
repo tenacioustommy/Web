@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      body {
+        height: 3000px;
+      }
+      div {
+        display: none;
+      }
+    </style>
+  </head>
+  <body>
+    <div>text text text</div>
+    <script>
+      const div = document.querySelector("div");
+      document.documentElement.scrollTop = 800;
+      window.addEventListener("scroll", function () {
+        const n = document.documentElement.scrollTop;
+        if (n >= 400) {
+          div.style.display = "block";
+        }
+      });
+    </script>
+  </body>
+</html>

@@ -151,12 +151,8 @@
         img.src = sliderData[i].url;
         p.innerHTML = sliderData[i].title;
         footer.style.backgroundColor = sliderData[i].color;
-        document
-          .querySelector(".slider-indicator .active")
-          .classList.remove("active");
-        const li = document.querySelector(
-          `.slider-indicator li:nth-of-type(${i + 1})`
-        );
+        document.querySelector(".slider-indicator .active").classList.remove("active");
+        const li = document.querySelector(`.slider-indicator li:nth-of-type(${i + 1})`);
         li.classList.add("active");
       });
       prev.addEventListener("click", () => {
@@ -164,12 +160,8 @@
         img.src = sliderData[i].url;
         p.innerHTML = sliderData[i].title;
         footer.style.backgroundColor = sliderData[i].color;
-        document
-          .querySelector(".slider-indicator .active")
-          .classList.remove("active");
-        const li = document.querySelector(
-          `.slider-indicator li:nth-of-type(${i + 1})`
-        );
+        document.querySelector(".slider-indicator .active").classList.remove("active");
+        const li = document.querySelector(`.slider-indicator li:nth-of-type(${i + 1})`);
         li.classList.add("active");
       });
       let n = setInterval(() => {
@@ -186,17 +178,12 @@
       });
       const indicator = document.querySelector(".slider-indicator");
       for (let i = 0; i < 3; i++) {
-        const li = document.querySelector(
-          `.slider-indicator li:nth-of-type(${i + 1})`
-        );
+        const li = document.querySelector(`.slider-indicator li:nth-of-type(${i + 1})`);
         li.addEventListener("click", () => {
           img.src = sliderData[i].url;
           p.innerHTML = sliderData[i].title;
           footer.style.backgroundColor = sliderData[i].color;
-          document
-            .querySelector(".slider-indicator .active")
-            .classList.remove("active");
-
+          document.querySelector(".slider-indicator .active").classList.remove("active");
           li.classList.add("active");
         });
       }

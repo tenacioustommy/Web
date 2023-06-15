@@ -1,42 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
     <style>
-        .box{
-            
-            width: 200px;
-            height: 200px;
-            background-color: pink;
-        }
-        body{
-            background: url(img/1.jpg) no-repeat top center /cover;
-        }
+      .box {
+        width: 200px;
+        height: 200px;
+        background-color: pink;
+      }
+      body {
+        background: url(img/1.jpg) no-repeat top center / cover;
+      }
+      [type="text"] {
+        width: 200px;
+      }
+      [type="text"]:focus {
+        width: 300px;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <!-- 自定义属性 -->
     <div data-id="1">1</div>
     <div data-id="2">2</div>
     <div data-id="3">3</div>
     <div data-id="4">4</div>
     <div data-id="5">5</div>
-    <input type="checkbox">
+    <input type="checkbox" />
     <button>button</button>
     <ul class="nav">
-        <li>test</li>
-        <li>test</li>
-        <li>te&nbsp;&nbsp;&nbsp;st</li>
+      <li>test</li>
+      <li>test</li>
+      <li>te&nbsp;&nbsp;&nbsp;st</li>
     </ul>
+    <a href="http://www.baidu.com">baidu</a>
     <div class="nav">123</div>
-    <img src="img/1.jpg">
+
     <div class="box">
-        i'am ads
-        <div class="box1">X</div>
-    </div>c
+      i'am ads
+      <div class="box1">X</div>
+    </div>
     <script src="listener.js"></script>
-    
-</body>
+    <input type="text" />
+    <script>
+      const input = document.querySelector("[type=text]");
+      input.addEventListener("input", function () {
+        console.log(input.value);
+      });
+      // 阻止默认行为
+      const a = document.querySelector("a");
+      a.addEventListener("click", function (e) {
+        e.preventDefault();
+      });
+      document.addEventListener("DOMContentLoaded", function () {});
+    </script>
+  </body>
 </html>

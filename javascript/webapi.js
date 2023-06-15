@@ -25,10 +25,10 @@ console.log(box.innerHTML);
 function getrandom(N, M) {
   return Math.floor(Math.random() * (M - N)) + N;
 }
-const img = document.querySelector("img");
-const random = getrandom(1, 3);
-img.src = `img/${random}.jpg`;
-img.title = "random jpg";
+// const img = document.querySelector("img");
+// const random = getrandom(1, 3)
+// img.src = `img/${random}.jpg`;
+// img.title = "random jpg";
 box.style.backgroundColor = "red";
 document.body.style.backgroundImage = "";
 // 复选框
@@ -46,3 +46,4 @@ let num = setInterval(function () {
   document.write(i);
 }, 100);
 clearInterval(num);
+// 捕获

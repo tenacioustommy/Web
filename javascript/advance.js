@@ -78,3 +78,27 @@ let d = 2;
 [1, 2, 3].map(function (item) {
   console.log(item);
 });
+// constructor
+function Pig(name, age, gender) {
+  this.name = name;
+  this.age = age;
+  this.gender = gender;
+}
+const asd = new Pig("pig", 6, "female");
+// 内置方法
+console.log(Object.keys(asd));
+const arr1 = [1, 5, 8];
+arr1.reduce((prev, current) => {
+  return prev + current;
+}, 0);
+// 原型对象写方法
+Pig.prototype.sayHi = function () {
+  console.log("asd");
+};
+// 所有实例都可以用原型对象方法
+console.log(asd.__proto__);
+// 深拷贝
+const s = JSON.parse(JSON.stringify(asd));
+const max2 = Math.max.apply(null, [1, 2, 3]);
+console.log(max2);
+f1.bind(f3);

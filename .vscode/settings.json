@@ -1,0 +1,20 @@
+{
+  "java.configuration.updateBuildConfiguration": "interactive",
+  "java.project.sourcePaths": ["java/src"],
+  "sqltools.connections": [
+    {
+      "mysqlOptions": {
+        "authProtocol": "default",
+        "enableSsl": "Disabled"
+      },
+      "previewLimit": 50,
+      "server": "localhost",
+      "port": 3306,
+      "driver": "MySQL",
+      "name": "Mybatis",
+      "database": "mybatis",
+      "username": "root"
+    }
+  ],
+  "java.compile.nullAnalysis.mode": "disabled"
+}

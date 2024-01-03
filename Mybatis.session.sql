@@ -11,12 +11,18 @@ SHOW TABLES;
 ALTER TABLE tb_user
 add qq varchar(11);
 -- @block
-INSERT INTO tb_user (id, username, name, age, gender, qq)
+INSERT INTO tb_user (id, username, name, age, gender)
 VALUES (
         0,
         'username:varchar',
         'name:var',
         15,
-        'm',
-        'qq:varchar'
+        '1',
     );
+-- @block
+ALTER TABLE tb_user DROP COLUMN qq;
+-- @block
+DELETE from tb_user
+where tb_user.id = 0;
+-- @block
+SET SESSION character_set_client = 'utf8';

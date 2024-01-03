@@ -3,8 +3,6 @@ package com.tenacious.mavendemo.controller;
 import com.tenacious.mavendemo.pojo.Result;
 import com.tenacious.mavendemo.pojo.User;
 
-import jakarta.websocket.server.PathParam;
-
 import org.springframework.web.bind.annotation.RestController;
 
 import java.time.LocalDateTime;
